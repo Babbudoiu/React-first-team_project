@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.nav-bar {
+    background-color:bisque;
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-bar li {
+    width: 85px;
+    flex: 2;
+  }
+
+  li {
+    color:rgb(0, 0, 0);
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background:rgba(0,0,0,0.2);
+    padding:20px 5px;
+    display: inline-block;
+    text-align: center;
+    transition:all 0.5s;
+}
+
+li:hover {
+    background:rgba(0, 0, 0, 0.2);
+    transform:scale(1.2);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+
+/* text elements */
+
+.homePar{
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    text-decoration: underline;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px black, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.mainh3 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 30px;
+    
+}
+
+.checkh3{
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+}
+
+.checkh3 span {
+    color: red;
+    text-shadow: 1px 1px 2px yellow, 0 0 25px yellow, 0 0 5px rgb(2, 2, 0);
+}
+
+p {
+    color: white;
+    font-size: 15px;
+    padding: 6px;
+}
+
+p span {
+    color: red;
+  text-shadow: 1px 1px 2px black, 0 0 25px yellow, 0 0 5px rgb(2, 2, 0);
+}
+
+/* this shouldn't be here but I cba to move it */
+.checkoutImg {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* main cards */
+
+.card {
+    border-radius: 5px;
+    border: 2px solid  #03e9f4;
+    margin: 15px;
+    display: flex;
+    float: left;
+    background-color: black;
+    padding: 8px;
+    width: 30.5%;
+    height: 20%;
+    align-items:center;
+    box-sizing: border-box;
+}
+
+.card img {
+    max-width: 200px;
+    max-height: 100px;
+    min-width:200px;
+    min-height:100px;
+    border-radius: 5px 5px 0 0;
+    justify-content: center;
+}
+
+.card:hover{
+    transform: scale(1.2);
+  
+}
+
+  
+ .container {
+    box-sizing: border-box;
+    background-image: url("./assets/cats.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+   
+  }
+
+  .layer {
+    background-color: rgba(248, 247, 216, 0.25);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+
+  }
+
+  /*buttons */
+
+  .addBtn, .removeBtn{
+      position: relative; 
+      display: inline-block; 
+      color: #03e9f4;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.5s;
+      letter-spacing: 2px;
+      overflow: hidden;
+      box-sizing: border-box;
+      background-color: #050801;
+      width: 35%;
+      height: 80px;
+      border-style: none;
+}
+
+.addBtn:hover, .removeBtn:hover {
+       cursor: pointer;
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 5px #03e9f4,
+                    0 0 25px #03e9f4,
+                    0 0 50px #03e9f4,
+                    0 0 200px #03e9f4;
+         -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    }
+    .addBtn span, .removeBtn span{
+        position: absolute;
+        display: block;
+    }
+    .addBtn span:nth-child(1), .removeBtn span:nth-child(1){
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg,transparent,#03e9f4);
+        animation: animate1 1s linear infinite;
+    }
+    @keyframes animate1{
+        0%{
+            left: -100%;
+        }
+        50%,100%{
+            left: 100%;
+        }
+    }
+    .addBtn span:nth-child(2), .removeBtn span:nth-child(2){
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg,transparent,#03e9f4);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    @keyframes animate2{
+        0%{
+            top: -100%;
+        }
+        50%,100%{
+            top: 100%;
+        }
+    }
+    addBtn span:nth-child(3){
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg,transparent,#03e9f4);
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.50s;
+    }
+    @keyframes animate3{
+        0%{
+            right: -100%;
+        }
+        50%,100%{
+            right: 100%;
+        }
+    }
+    .addBtn span:nth-child(4), .removeBtn span:nth-child(4){
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent,#03e9f4);
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s;
+    }
+    @keyframes animate4{
+        0%{
+            bottom: -100%;
+        }
+        50%,100%{
+            bottom: 100%;
+        }
+    }
+
+     /* checkout page */
+    .checkoutCard {
+        border-radius: 5px;
+        border: 2px solid  #03e9f4;
+        margin: 15px;
+        background-color: black;
+        padding: 8px;
+        align-items:center;
+        box-sizing: border-box;
+        width: 20%;
+        display: inline-block;
+       
+    }
+
+    .checkoutCard:hover {
+        transform:scale(1.1);
+    }
+
+    /* media queries */
+
+    @media all and (max-width:1000px) {
+        .flex-nav li {
+        white-space: nowrap;
+        flex: 1 1 50%;
+    }}
+
+    @media all and (max-width:500px) {
+        .flex-nav li {
+        flex: 1 1 100%
+    }}
+    
+  
+
